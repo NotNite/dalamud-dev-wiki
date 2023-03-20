@@ -1,5 +1,5 @@
 +++
-title = "Using Plugin Services"
+title = "Using plugin services"
 description = "Services provided by Dalamud to plugins"
 +++
 

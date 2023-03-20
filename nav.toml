@@ -9,3 +9,6 @@ path = "using-plugin-services"
 
 [[nav]]
 path = "submitting-your-plugin"
+
+[[nav]]
+path = "local-dalamud"
