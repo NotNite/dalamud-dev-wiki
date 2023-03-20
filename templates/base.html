@@ -4,10 +4,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/dalamud.png" />
-    <meta property="og:image" content="/dalamud.png" />
+    <link rel="icon" href="{{ get_url(path='dalamud.png') }}" />
+    <meta property="og:image" content="{{ get_url(path='dalamud.png') }}" />
 
     <!-- prettier-ignore -->
     {% block head %}
@@ -32,7 +32,11 @@
     <section class="section">
       <div class="sidebar">
         {% set sidebar_nav = load_data(path="nav.toml") %}
-        <img src="/dalamud.png" class="logo" alt="Dalamud logo" />
+        <img
+          src="{{ get_url(path='dalamud.png') }}"
+          class="logo"
+          alt="Dalamud logo"
+        />
 
         <hr />
 

@@ -1,4 +1,4 @@
-base_url = "https://dalamud.wiki"
+base_url = "https://notnite.github.io/dalamud-dev-wiki"
 compile_sass = true
 build_search_index = false
 minify_html = true
