@@ -1,0 +1,83 @@
+@import "nord.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  margin: 0;
+
+  background-color: $nord0;
+  color: $nord4;
+
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: $nord8;
+  text-decoration: none;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+
+  // padding between items
+  & > * {
+    margin: 0 1rem;
+  }
+}
+
+.sidebar,
+.toc {
+  min-width: 10rem;
+}
+
+main {
+  width: 30rem;
+
+  overflow-x: auto;
+  overflow-wrap: break-word;
+}
+
+.logo {
+  width: 10rem;
+  height: 10rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $nord3;
+}
+
+.page-header > h1 {
+  margin-bottom: 0;
+}
+
+// Hide the table of contents on small screens
+@media (max-width: 1000px) {
+  .toc {
+    display: none;
+  }
+}
+
+// and hide the sidebar on even smaller screens
+@media (max-width: 800px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    .logo,
+    hr {
+      display: none;
+    }
+
+    height: min-content;
+  }
+}

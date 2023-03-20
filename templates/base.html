@@ -1,0 +1,72 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/dalamud.png" />
+    <meta property="og:image" content="/dalamud.png" />
+
+    <!-- prettier-ignore -->
+    {% block head %}
+    {% if page %}
+      {% set title = page.title %}
+      {% set description = page.description %}
+    {% elif section %}
+      {% set title = section.title %}
+      {% set description = section.description %}
+    {% else %}
+      {% set title = "" %}
+      {% set description = "" %}
+    {% endif %}
+
+    <title>{{ title }}</title>
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    {% endblock head %}
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="sidebar">
+        {% set sidebar_nav = load_data(path="nav.toml") %}
+        <img src="/dalamud.png" class="logo" alt="Dalamud logo" />
+
+        <hr />
+
+        <ul>
+          <!-- Index is a section, not a page, so we have to work around -->
+          <li>
+            <a href="{{ get_url(path='/') }}">Home</a>
+          </li>
+
+          <!-- prettier-ignore -->
+          {{ macros::sidebar(nav=sidebar_nav.nav) }}
+        </ul>
+      </div>
+      <main>{% block content %} {% endblock content %}</main>
+      <div class="toc">
+        {% if page.toc %}
+        <ul>
+          {% for h1 in page.toc %}
+          <li>
+            <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+            {% if h1.children %}
+            <ul>
+              {% for h2 in h1.children %}
+              <li>
+                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </section>
+  </body>
+</html>

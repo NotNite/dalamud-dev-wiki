@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+<div class="page-header">
+  <h1 class="title">{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+
+<hr />
+
+<!-- prettier-ignore -->
+{% if page %}
+  {{ page.content | safe }}
+{% elif section %}
+  {{ section.content | safe }}
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+base_url = "https://dalamud.wiki"
+compile_sass = true
+build_search_index = false
+minify_html = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "nord"
+render_emoji = true
+
+[extra]
+pages = [
+  "contributing"
+]

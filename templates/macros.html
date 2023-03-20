@@ -1,0 +1,16 @@
+<!-- prettier-ignore -->
+{% macro sidebar(nav) %}
+{% for item in nav %}
+{% set page = get_page(path=item.path ~ ".md") %}
+{% if item.has_children %}
+<li>
+  <a href="{{ get_url(path=item.path) }}">{{ page.title }}</a>
+  <ul>
+    {{ macros::sidebar(nav=item.children) }}
+  </ul>
+</li>
+{% else %}
+<li>
+  <a href="{{ get_url(path=item.path) }}">{{ page.title }}</a>
+</li>
+{% endif %} {% endfor %} {% endmacro sidebar %}
