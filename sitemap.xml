@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://notnite.github.io/dalamud-dev-wiki/</loc>
+    </url>
+    <url>
+        <loc>https://notnite.github.io/dalamud-dev-wiki/contributing/</loc>
+    </url>
+    <url>
+        <loc>https://notnite.github.io/dalamud-dev-wiki/local-dalamud/</loc>
+    </url>
+    <url>
+        <loc>https://notnite.github.io/dalamud-dev-wiki/submitting-your-plugin/</loc>
+    </url>
+    <url>
+        <loc>https://notnite.github.io/dalamud-dev-wiki/using-plugin-services/</loc>
+    </url>
+    <url>
+        <loc>https://notnite.github.io/dalamud-dev-wiki/using-sampleplugin/</loc>
+    </url>
+</urlset>
