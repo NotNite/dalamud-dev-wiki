@@ -16,7 +16,7 @@ description = "This is a cool page"
 +++
 ```
 
-Do _not_ add first level headers (`#`), as they will be added from the `title` key.
+Do *not* add first level headers (`#`), as they will be added from the `title` key.
 
 ## Linting & formatting
 
