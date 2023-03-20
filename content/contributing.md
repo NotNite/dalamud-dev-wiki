@@ -22,7 +22,7 @@ Do *not* add first level headers (`#`), as they will be added from the `title` k
 
 The wiki uses [Prettier](https://prettier.io/) and [markdownlint](https://github.com/DavidAnson/markdownlint). Lints will be checked via a GitHub Action.
 
-To format with the Prettier CLI, run `prettier --write .`. To lint with the markdownlint CLI, run `markdownlint2 content/**/*.md`.
+To format with the Prettier CLI, run `prettier --write .`. To lint with the markdownlint CLI, run `markdownlint-cli2 content/**/*.md`.
 
 ## Previewing
 

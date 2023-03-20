@@ -1,2 +1,8 @@
 [[nav]]
 path = "contributing"
+
+[[nav]]
+path = "using-sampleplugin"
+
+[[nav]]
+path = "using-plugin-services"

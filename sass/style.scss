@@ -39,7 +39,7 @@ a {
 }
 
 main {
-  width: 30rem;
+  max-width: 30rem;
 
   overflow-x: auto;
   overflow-wrap: break-word;
@@ -80,4 +80,9 @@ hr {
 
     height: min-content;
   }
+}
+
+pre {
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
