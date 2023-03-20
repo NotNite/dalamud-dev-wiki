@@ -23,7 +23,7 @@ a {
 .section {
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   align-items: stretch;
 
