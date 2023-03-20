@@ -22,7 +22,8 @@ a {
 
 .section {
   min-height: 100vh;
-  max-width: 100vw;
+  // This sucks. I hate CSS
+  max-width: calc(100vw - 1rem);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
