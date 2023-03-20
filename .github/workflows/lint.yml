@@ -8,6 +8,6 @@ jobs:
       - uses: nosborn/github-action-markdown-cli@v3.2.0
         with:
           files: .
-      - uses: creyD/prettier_action@v4.2
+      - uses: creyD/prettier_action@v4.3
         with:
-          prettier_options: --write **/*
+          prettier_options: --write .
